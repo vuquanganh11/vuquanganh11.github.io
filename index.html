@@ -41,6 +41,53 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
     will-change: transform, box-shadow, filter;
     transition: transform 80ms linear, box-shadow 80ms linear;
   }
+  /* ===== Color overrides theo yêu cầu ===== */
+
+/* Steam */
+.box.steam{
+  background: #171a21 !important;
+}
+
+/* Riot */
+.box.Riot{
+  background: #E55F2F !important;
+}
+
+/* Discord */
+.box.discord{
+  background: #7289da !important;
+}
+
+/* Email - Rainbow */
+.box.gmail{
+  background: linear-gradient(
+    90deg,
+    #ff004c,
+    #ff7a00,
+    #ffe600,
+    #00d084,
+    #00a3ff,
+    #7a5cff,
+    #ff00d4
+  ) !important;
+  background-size: 400% 100% !important;
+  animation: gmailRainbow 6s linear infinite !important;
+}
+
+/* Text/icon luôn rõ trên nền màu */
+.box.steam .detail, .box.steam .linked,
+.box.Riot  .detail, .box.Riot  .linked,
+.box.discord .detail, .box.discord .linked,
+.box.gmail .detail, .box.gmail .linked{
+  color: #fff !important;
+}
+
+/* Rainbow animation */
+@keyframes gmailRainbow{
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
 </style>
 
 </head>
@@ -122,21 +169,6 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 </div>
 </div>
 </div>
-<!-- tiktok -->
-<div class="box tiktok" bis_size="{&quot;x&quot;:782,&quot;y&quot;:509,&quot;w&quot;:337,&quot;h&quot;:50,&quot;abs_x&quot;:782,&quot;abs_y&quot;:509}">
-<div class="row" bis_size="{&quot;x&quot;:770,&quot;y&quot;:509,&quot;w&quot;:361,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:509}">
-<div class="col-2" bis_size="{&quot;x&quot;:770,&quot;y&quot;:509,&quot;w&quot;:60,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:509}">
-<div class="icon" bis_size="{&quot;x&quot;:782,&quot;y&quot;:529,&quot;w&quot;:66,&quot;h&quot;:19,&quot;abs_x&quot;:782,&quot;abs_y&quot;:529}">
-<div class="div-logo momo-icon" style="background-image: url(&#39;https://static.vecteezy.com/system/resources/thumbnails/016/716/450/small/tiktok-icon-free-png.png&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:759,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:759}"></div>
-</div>
-</div>
-<div class="col-10" onclick="openlink(&#39;https://www.tiktok.com/@ricardobeos&#39;)" bis_size="{&quot;x&quot;:831,&quot;y&quot;:509,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:509}">
-<p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:519,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:519}">TikTok</p>
-<p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:519,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:519}">Ricaldo Beos</p>
-</div>
-</div>
-</div>
-</div>
 <!-- zalo -->
 <div class="box zalo" bis_size="{&quot;x&quot;:782,&quot;y&quot;:629,&quot;w&quot;:337,&quot;h&quot;:50,&quot;abs_x&quot;:782,&quot;abs_y&quot;:629}">
 <div class="row" bis_size="{&quot;x&quot;:770,&quot;y&quot;:629,&quot;w&quot;:361,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:629}">
@@ -145,9 +177,23 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 <div class="div-logo zalo-icon" style="background-image: url(&#39;https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Icon_of_Zalo.svg/2048px-Icon_of_Zalo.svg.png&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:639,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:639}"></div>
 </div>
 </div>
-<div class="col-10" onclick="openlink(&#39;https://www.zalo.me/0386897757/&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:629,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:629}">
+<div class="col-10" onclick="openlink(&#39;http://zaloapp.com/qr/p/1t6o2f9a743gr&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:629,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:629}">
 <p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:639,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:639}">Zalo</p>
-<p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:639,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:639}">Lê Anh Đức</p>
+<p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:639,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:639}">Vũ Quang Anh</p>
+</div>
+</div>
+</div>
+<!-- gmail -->
+<div class="box gmail" bis_size="{&quot;x&quot;:782,&quot;y&quot;:809,&quot;w&quot;:337,&quot;h&quot;:50,&quot;abs_x&quot;:782,&quot;abs_y&quot;:809}">
+<div class="row" bis_size="{&quot;x&quot;:770,&quot;y&quot;:809,&quot;w&quot;:361,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:809}">
+<div class="col-2" bis_size="{&quot;x&quot;:770,&quot;y&quot;:809,&quot;w&quot;:60,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:809}">
+<div class="icon" bis_size="{&quot;x&quot;:782,&quot;y&quot;:819,&quot;w&quot;:36,&quot;h&quot;:30,&quot;abs_x&quot;:782,&quot;abs_y&quot;:819}">
+<div class="div-logo gmail-icon" style="background-image: url(&#39;https://images.icon-icons.com/2642/PNG/512/google_mail_gmail_logo_icon_159346.png&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:819,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:819}"></div>
+</div>
+</div>
+<div class="col-10" onclick="copytext(&#39;vuquanganh2003@gmail.com&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:809,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:809}">
+<p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:819,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:819}">Email</p>
+<p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:819,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:819}">vuquanganh2003@gmail.com</p>
 </div>
 </div>
 </div>
@@ -159,23 +205,50 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 <div class="div-logo momo-icon" style="background-image: url(&#39;https://pbs.twimg.com/media/D4OewnTWAAABD_U.jpg&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:759,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:759}"></div>
 </div>
 </div>
-<div class="col-10" onclick="openlink(&#39;tel:+84948569099&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:689,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:689}">
+<div class="col-10" onclick="openlink(&#39;tel:+84948569066&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:689,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:689}">
 <p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:699,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:699}">Phone</p>
 <p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:699,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:699}">094.856.9066</p>
 </div>
 </div>
+</div><!-- steam -->
+<div class="box steam" bis_size="{&quot;x&quot;:782,&quot;y&quot;:449,&quot;w&quot;:337,&quot;h&quot;:50,&quot;abs_x&quot;:782,&quot;abs_y&quot;:449}">
+<div class="row" bis_size="{&quot;x&quot;:771,&quot;y&quot;:450,&quot;w&quot;:359,&quot;h&quot;:80,&quot;abs_x&quot;:771,&quot;abs_y&quot;:450}">
+<div class="col-2" bis_size="{&quot;x&quot;:771,&quot;y&quot;:450,&quot;w&quot;:59,&quot;h&quot;:80,&quot;abs_x&quot;:771,&quot;abs_y&quot;:450}">
+<div class="icon" bis_size="{&quot;x&quot;:783,&quot;y&quot;:470,&quot;w&quot;:70,&quot;h&quot;:19,&quot;abs_x&quot;:783,&quot;abs_y&quot;:470}">
+<div class="div-logo momo-icon" style="background-image: url(&#39;https://www.logo.wine/a/logo/Steam_(service)/Steam_(service)-Logo.wine.svg&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:759,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:759}"></div>
 </div>
-<!-- momo -->
-<div class="box momo" bis_size="{&quot;x&quot;:782,&quot;y&quot;:749,&quot;w&quot;:337,&quot;h&quot;:50,&quot;abs_x&quot;:782,&quot;abs_y&quot;:749}">
-<div class="row" bis_size="{&quot;x&quot;:770,&quot;y&quot;:749,&quot;w&quot;:361,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:749}">
-<div class="col-2" bis_size="{&quot;x&quot;:770,&quot;y&quot;:749,&quot;w&quot;:60,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:749}">
-<div class="icon" bis_size="{&quot;x&quot;:782,&quot;y&quot;:759,&quot;w&quot;:36,&quot;h&quot;:30,&quot;abs_x&quot;:782,&quot;abs_y&quot;:759}">
-<div class="div-logo momo-icon" style="background-image: url(&#39;https://cdn.leanhduc.pro.vn/theme/theme-thong-tin-lien-he-version-2-0/images/momo.png&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:759,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:759}"></div>
+</div>
+<div class="col-10" onclick="openlink(&#39;https://steamcommunity.com/id/negachinn/&#39;)" bis_size="{&quot;x&quot;:831,&quot;y&quot;:450,&quot;w&quot;:299,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:450}">
+<p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:460,&quot;w&quot;:275,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:460}">Steam</p>
+<p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:460,&quot;w&quot;:275,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:460}">Vũ Quang Anh</p>
 </div>
 </div>
-<div class="col-10" onclick="openlink(&#39;https://nhantien.momo.vn/0386897757&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:749,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:749}">
-<p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:759,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:759}">Momo</p>
-<p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:759,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:759}">094.856.9066</p>
+</div>
+<!-- Riot -->
+<div class="box Riot" bis_size="{&quot;x&quot;:782,&quot;y&quot;:809,&quot;w&quot;:337,&quot;h&quot;:50,&quot;abs_x&quot;:782,&quot;abs_y&quot;:809}">
+<div class="row" bis_size="{&quot;x&quot;:770,&quot;y&quot;:809,&quot;w&quot;:361,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:809}">
+<div class="col-2" bis_size="{&quot;x&quot;:770,&quot;y&quot;:809,&quot;w&quot;:60,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:809}">
+<div class="icon" bis_size="{&quot;x&quot;:782,&quot;y&quot;:819,&quot;w&quot;:36,&quot;h&quot;:30,&quot;abs_x&quot;:782,&quot;abs_y&quot;:819}">
+<div class="div-logo Riot-icon" style="background-image: url(&#39;https://img.icons8.com/color/512/riot-games.png&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:819,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:819}"></div>
+</div>
+</div>
+<div class="col-10" onclick="copytext(&#39;MASSIVE Low Tape #LTPF&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:809,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:809}">
+<p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:819,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:819}">Riot (League of legends)</p>
+<p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:819,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:819}">MASSIVE Low Tape #LTPF</p>
+</div>
+</div>
+</div>
+<!-- discord -->
+<div class="box discord" bis_size="{&quot;x&quot;:782,&quot;y&quot;:809,&quot;w&quot;:337,&quot;h&quot;:50,&quot;abs_x&quot;:782,&quot;abs_y&quot;:809}">
+<div class="row" bis_size="{&quot;x&quot;:770,&quot;y&quot;:809,&quot;w&quot;:361,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:809}">
+<div class="col-2" bis_size="{&quot;x&quot;:770,&quot;y&quot;:809,&quot;w&quot;:60,&quot;h&quot;:80,&quot;abs_x&quot;:770,&quot;abs_y&quot;:809}">
+<div class="icon" bis_size="{&quot;x&quot;:782,&quot;y&quot;:819,&quot;w&quot;:36,&quot;h&quot;:30,&quot;abs_x&quot;:782,&quot;abs_y&quot;:819}">
+<div class="div-logo discord-icon" style="background-image: url(&#39;https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:819,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:819}"></div>
+</div>
+</div>
+<div class="col-10" onclick="copytext(&#39;ricardobeos&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:809,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:809}">
+<p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:819,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:819}">Discord</p>
+<p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:819,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:819}">ricardobeos</p>
 </div>
 </div>
 </div>
@@ -187,7 +260,7 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 <div class="div-logo bidv-icon" style="background-image: url(&#39;https://cdn.haitrieu.com/wp-content/uploads/2022/01/Icon-BIDV-.png&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:819,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:819}"></div>
 </div>
 </div>
-<div class="col-10" onclick="copytext(&#39;9386897757&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:809,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:809}">
+<div class="col-10" onclick="copytext(&#39;0948569066&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:809,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:809}">
 <p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:819,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:819}">BIDV</p>
 <p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:819,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:819}">0948569066</p>
 </div>
@@ -201,7 +274,7 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 <div class="div-logo cake-icon" style="background-image: url(&#39;https://storage.googleapis.com/neobanque-website/logo/cake.webp&#39;);" bis_label="style" bis_size="{&quot;x&quot;:802,&quot;y&quot;:879,&quot;w&quot;:30,&quot;h&quot;:30,&quot;abs_x&quot;:802,&quot;abs_y&quot;:879}"></div>
 </div>
 </div>
-<div class="col-10" onclick="copytext(&#39;333369693333&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:869,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:869}">
+<div class="col-10" onclick="copytext(&#39;0948569066&#39;);" bis_size="{&quot;x&quot;:831,&quot;y&quot;:869,&quot;w&quot;:301,&quot;h&quot;:80,&quot;abs_x&quot;:831,&quot;abs_y&quot;:869}">
 <p class="detail" bis_size="{&quot;x&quot;:843,&quot;y&quot;:879,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:879}">CAKE</p>
 <p class="linked" bis_size="{&quot;x&quot;:843,&quot;y&quot;:879,&quot;w&quot;:277,&quot;h&quot;:30,&quot;abs_x&quot;:843,&quot;abs_y&quot;:879}">0948569066</p>
 </div>
@@ -235,7 +308,7 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 			//]]>
 		</script>
 <div class="no-items section" id="code.pro.vn" bis_size="{&quot;x&quot;:0,&quot;y&quot;:0,&quot;w&quot;:1903,&quot;h&quot;:0,&quot;abs_x&quot;:0,&quot;abs_y&quot;:0}"></div>
-	<!--<head>
+<head>
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
 
@@ -260,7 +333,7 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 </style>
 
 </head>-->
-	<!--<body>
+	<body>
 </body>-->
 	
 	
