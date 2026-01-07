@@ -22,6 +22,102 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
     .music-dock.is-pill{ width: 56vw; transform: scale(0.92); border-radius: 18px; }
   }
 
+/* ===== Custom overrides (Quang Anh) ===== */
+@font-face{
+  font-family: 'Minecraft';
+  src: url('./Minecraft.ttf') format('truetype');
+  font-display: swap;
+}
+#name, #contact-text{
+  font-family: 'Minecraft', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+  letter-spacing: 0.5px;
+}
+#name{
+  line-height: 1.15;
+}
+#contact-text{
+  letter-spacing: 1px;
+}
+
+/* Brand colors requested */
+.box.steam{
+  background: #171a21 !important;
+}
+.box.steam .detail, .box.steam .linked{
+  color: #ffffff !important;
+}
+.box.riot{
+  background: #E55F2F !important;
+}
+.box.riot .detail, .box.riot .linked{
+  color: #ffffff !important;
+}
+.box.discord{
+  background: #7289da !important;
+}
+.box.discord .detail, .box.discord .linked{
+  color: #ffffff !important;
+}
+
+/* Email rainbow */
+.box.gmail{
+  background: linear-gradient(90deg,
+    #ff004c 0%,
+    #ff5f00 18%,
+    #ffd500 36%,
+    #00c853 54%,
+    #00b0ff 72%,
+    #7c4dff 90%,
+    #ff00cc 100%
+  ) !important;
+}
+.box.gmail .detail, .box.gmail .linked{
+  color: #ffffff !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,.35);
+}
+
+/* Make sure left logos always show nicely */
+.div-logo{
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+
+/* Facebook 2 (Meta) - FIX: nền trắng, chữ đen, hover đổi sang "linked" như các nút khác */
+.box.facebook2{
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,.08) !important;
+}
+.box.facebook2 .detail,
+.box.facebook2 .linked{
+  color: #111111 !important;
+  text-shadow: none !important;
+}
+
+/* trạng thái thường: hiện detail, ẩn linked */
+.box.facebook2 .linked{
+  filter: opacity(0) !important;
+  z-index: -2 !important;
+}
+
+/* hover/active: ẩn detail, hiện linked (selector đúng: .col-10 nằm TRONG .box) */
+.box.facebook2 .col-10:hover .detail,
+.box.facebook2 .col-10:active .detail{
+  filter: opacity(0) !important;
+  z-index: -5 !important;
+}
+.box.facebook2 .col-10:hover .linked,
+.box.facebook2 .col-10:active .linked{
+  filter: opacity(1) !important;
+  z-index: 5 !important;
+}
+/* Music dock: never "vanish" by default; only shrink */
+.music-dock{ 
+  display: block !important;
+  opacity: 1 !important;
+}
+
 </style>
 	<style>:root{--swal2-outline: 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-container-padding: 0.625em;--swal2-backdrop: rgba(0, 0, 0, 0.4);--swal2-backdrop-transition: background-color 0.15s;--swal2-width: 32em;--swal2-padding: 0 0 1.25em;--swal2-border: none;--swal2-border-radius: 0.3125rem;--swal2-background: white;--swal2-color: #545454;--swal2-show-animation: swal2-show 0.3s;--swal2-hide-animation: swal2-hide 0.15s forwards;--swal2-icon-zoom: 1;--swal2-icon-animations: true;--swal2-title-padding: 0.8em 1em 0;--swal2-html-container-padding: 1em 1.6em 0.3em;--swal2-input-border: 1px solid #d9d9d9;--swal2-input-border-radius: 0.1875em;--swal2-input-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-background: transparent;--swal2-input-transition: border-color 0.2s, box-shadow 0.2s;--swal2-input-hover-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px transparent;--swal2-input-focus-border: 1px solid #b4dbed;--swal2-input-focus-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(100, 150, 200, 0.5);--swal2-progress-step-background: #add8e6;--swal2-validation-message-background: #f0f0f0;--swal2-validation-message-color: #666;--swal2-footer-border-color: #eee;--swal2-footer-background: transparent;--swal2-footer-color: inherit;--swal2-timer-progress-bar-background: rgba(0, 0, 0, 0.3);--swal2-close-button-position: initial;--swal2-close-button-inset: auto;--swal2-close-button-font-size: 2.5em;--swal2-close-button-color: #ccc;--swal2-close-button-transition: color 0.2s, box-shadow 0.2s;--swal2-close-button-outline: initial;--swal2-close-button-box-shadow: inset 0 0 0 3px transparent;--swal2-close-button-focus-box-shadow: inset var(--swal2-outline);--swal2-close-button-hover-transform: none;--swal2-actions-justify-content: center;--swal2-actions-width: auto;--swal2-actions-margin: 1.25em auto 0;--swal2-actions-padding: 0;--swal2-actions-border-radius: 0;--swal2-actions-background: transparent;--swal2-action-button-transition: background-color 0.2s, box-shadow 0.2s;--swal2-action-button-hover: black 10%;--swal2-action-button-active: black 10%;--swal2-confirm-button-box-shadow: none;--swal2-confirm-button-border-radius: 0.25em;--swal2-confirm-button-background-color: #7066e0;--swal2-confirm-button-color: #fff;--swal2-deny-button-box-shadow: none;--swal2-deny-button-border-radius: 0.25em;--swal2-deny-button-background-color: #dc3741;--swal2-deny-button-color: #fff;--swal2-cancel-button-box-shadow: none;--swal2-cancel-button-border-radius: 0.25em;--swal2-cancel-button-background-color: #6e7881;--swal2-cancel-button-color: #fff;--swal2-toast-show-animation: swal2-toast-show 0.5s;--swal2-toast-hide-animation: swal2-toast-hide 0.1s forwards;--swal2-toast-border: none;--swal2-toast-box-shadow: 0 0 1px hsl(0deg 0% 0% / 0.075), 0 1px 2px hsl(0deg 0% 0% / 0.075), 1px 2px 4px hsl(0deg 0% 0% / 0.075), 1px 3px 8px hsl(0deg 0% 0% / 0.075), 2px 4px 16px hsl(0deg 0% 0% / 0.075)}[data-swal2-theme=dark]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}@media(prefers-color-scheme: dark){[data-swal2-theme=auto]{--swal2-dark-theme-black: #19191a;--swal2-dark-theme-white: #e1e1e1;--swal2-background: var(--swal2-dark-theme-black);--swal2-color: var(--swal2-dark-theme-white);--swal2-footer-border-color: #555;--swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);--swal2-validation-message-background: color-mix( in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10% );--swal2-validation-message-color: var(--swal2-dark-theme-white);--swal2-timer-progress-bar-background: rgba(255, 255, 255, 0.7)}}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto !important}body.swal2-no-backdrop .swal2-container{background-color:rgba(0,0,0,0) !important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:all}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px var(--swal2-backdrop)}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:rgba(0,0,0,0);pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{inset:0 auto auto 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{inset:0 0 auto auto}body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left{inset:0 auto auto 0}body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left{inset:50% auto auto 0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{inset:50% auto auto 50%;transform:translate(-50%, -50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{inset:50% 0 auto auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left{inset:auto auto 0 0}body.swal2-toast-shown .swal2-container.swal2-bottom{inset:auto auto 0 50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{inset:auto 0 0 auto}@media print{body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown){overflow-y:scroll !important}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) .swal2-container{position:static !important}}div:where(.swal2-container){display:grid;position:fixed;z-index:1060;inset:0;box-sizing:border-box;grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";grid-template-rows:minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);height:100%;padding:var(--swal2-container-padding);overflow-x:hidden;transition:var(--swal2-backdrop-transition);-webkit-overflow-scrolling:touch}div:where(.swal2-container).swal2-backdrop-show,div:where(.swal2-container).swal2-noanimation{background:var(--swal2-backdrop)}div:where(.swal2-container).swal2-backdrop-hide{background:rgba(0,0,0,0) !important}div:where(.swal2-container).swal2-top-start,div:where(.swal2-container).swal2-center-start,div:where(.swal2-container).swal2-bottom-start{grid-template-columns:minmax(0, 1fr) auto auto}div:where(.swal2-container).swal2-top,div:where(.swal2-container).swal2-center,div:where(.swal2-container).swal2-bottom{grid-template-columns:auto minmax(0, 1fr) auto}div:where(.swal2-container).swal2-top-end,div:where(.swal2-container).swal2-center-end,div:where(.swal2-container).swal2-bottom-end{grid-template-columns:auto auto minmax(0, 1fr)}div:where(.swal2-container).swal2-top-start>.swal2-popup{align-self:start}div:where(.swal2-container).swal2-top>.swal2-popup{grid-column:2;place-self:start center}div:where(.swal2-container).swal2-top-end>.swal2-popup,div:where(.swal2-container).swal2-top-right>.swal2-popup{grid-column:3;place-self:start end}div:where(.swal2-container).swal2-center-start>.swal2-popup,div:where(.swal2-container).swal2-center-left>.swal2-popup{grid-row:2;align-self:center}div:where(.swal2-container).swal2-center>.swal2-popup{grid-column:2;grid-row:2;place-self:center center}div:where(.swal2-container).swal2-center-end>.swal2-popup,div:where(.swal2-container).swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;place-self:center end}div:where(.swal2-container).swal2-bottom-start>.swal2-popup,div:where(.swal2-container).swal2-bottom-left>.swal2-popup{grid-column:1;grid-row:3;align-self:end}div:where(.swal2-container).swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;place-self:end center}div:where(.swal2-container).swal2-bottom-end>.swal2-popup,div:where(.swal2-container).swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;place-self:end end}div:where(.swal2-container).swal2-grow-row>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-column:1/4;width:100%}div:where(.swal2-container).swal2-grow-column>.swal2-popup,div:where(.swal2-container).swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}div:where(.swal2-container).swal2-no-transition{transition:none !important}div:where(.swal2-container)[popover]{width:auto;border:0}div:where(.swal2-container) div:where(.swal2-popup){display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0, 100%);width:var(--swal2-width);max-width:100%;padding:var(--swal2-padding);border:var(--swal2-border);border-radius:var(--swal2-border-radius);background:var(--swal2-background);color:var(--swal2-color);font-family:inherit;font-size:1rem;container-name:swal2-popup}div:where(.swal2-container) div:where(.swal2-popup):focus{outline:none}div:where(.swal2-container) div:where(.swal2-popup).swal2-loading{overflow-y:hidden}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable{cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable div:where(.swal2-icon){cursor:grab}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging{cursor:grabbing}div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging div:where(.swal2-icon){cursor:grabbing}div:where(.swal2-container) h2:where(.swal2-title){position:relative;max-width:100%;margin:0;padding:var(--swal2-title-padding);color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;overflow-wrap:break-word;cursor:initial}div:where(.swal2-container) div:where(.swal2-actions){display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:var(--swal2-actions-justify-content);width:var(--swal2-actions-width);margin:var(--swal2-actions-margin);padding:var(--swal2-actions-padding);border-radius:var(--swal2-actions-border-radius);background:var(--swal2-actions-background)}div:where(.swal2-container) div:where(.swal2-loader){display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 rgba(0,0,0,0) #2778c4 rgba(0,0,0,0)}div:where(.swal2-container) button:where(.swal2-styled){margin:.3125em;padding:.625em 1.1em;transition:var(--swal2-action-button-transition);border:none;box-shadow:0 0 0 3px rgba(0,0,0,0);font-weight:500}div:where(.swal2-container) button:where(.swal2-styled):not([disabled]){cursor:pointer}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm){border-radius:var(--swal2-confirm-button-border-radius);background:initial;background-color:var(--swal2-confirm-button-background-color);box-shadow:var(--swal2-confirm-button-box-shadow);color:var(--swal2-confirm-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):hover{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):active{background-color:color-mix(in srgb, var(--swal2-confirm-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny){border-radius:var(--swal2-deny-button-border-radius);background:initial;background-color:var(--swal2-deny-button-background-color);box-shadow:var(--swal2-deny-button-box-shadow);color:var(--swal2-deny-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):hover{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):active{background-color:color-mix(in srgb, var(--swal2-deny-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel){border-radius:var(--swal2-cancel-button-border-radius);background:initial;background-color:var(--swal2-cancel-button-background-color);box-shadow:var(--swal2-cancel-button-box-shadow);color:var(--swal2-cancel-button-color);font-size:1em}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):hover{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-hover))}div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):active{background-color:color-mix(in srgb, var(--swal2-cancel-button-background-color), var(--swal2-action-button-active))}div:where(.swal2-container) button:where(.swal2-styled):focus-visible{outline:none;box-shadow:var(--swal2-action-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-styled)[disabled]:not(.swal2-loading){opacity:.4}div:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-footer){margin:1em 0 0;padding:1em 1em 0;border-top:1px solid var(--swal2-footer-border-color);background:var(--swal2-footer-background);color:var(--swal2-footer-color);font-size:1em;text-align:center;cursor:initial}div:where(.swal2-container) .swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto !important;overflow:hidden;border-bottom-right-radius:var(--swal2-border-radius);border-bottom-left-radius:var(--swal2-border-radius)}div:where(.swal2-container) div:where(.swal2-timer-progress-bar){width:100%;height:.25em;background:var(--swal2-timer-progress-bar-background)}div:where(.swal2-container) img:where(.swal2-image){max-width:100%;margin:2em auto 1em;cursor:initial}div:where(.swal2-container) button:where(.swal2-close){position:var(--swal2-close-button-position);inset:var(--swal2-close-button-inset);z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:var(--swal2-close-button-transition);border:none;border-radius:var(--swal2-border-radius);outline:var(--swal2-close-button-outline);background:rgba(0,0,0,0);color:var(--swal2-close-button-color);font-family:monospace;font-size:var(--swal2-close-button-font-size);cursor:pointer;justify-self:end}div:where(.swal2-container) button:where(.swal2-close):hover{transform:var(--swal2-close-button-hover-transform);background:rgba(0,0,0,0);color:#f27474}div:where(.swal2-container) button:where(.swal2-close):focus-visible{outline:none;box-shadow:var(--swal2-close-button-focus-box-shadow)}div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner{border:0}div:where(.swal2-container) div:where(.swal2-html-container){z-index:1;justify-content:center;margin:0;padding:var(--swal2-html-container-padding);overflow:auto;color:inherit;font-size:1.125em;font-weight:normal;line-height:normal;text-align:center;overflow-wrap:break-word;word-break:break-word;cursor:initial}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea),div:where(.swal2-container) select:where(.swal2-select),div:where(.swal2-container) div:where(.swal2-radio),div:where(.swal2-container) label:where(.swal2-checkbox){margin:1em 2em 3px}div:where(.swal2-container) input:where(.swal2-input),div:where(.swal2-container) input:where(.swal2-file),div:where(.swal2-container) textarea:where(.swal2-textarea){box-sizing:border-box;width:auto;transition:var(--swal2-input-transition);border:var(--swal2-input-border);border-radius:var(--swal2-input-border-radius);background:var(--swal2-input-background);box-shadow:var(--swal2-input-box-shadow);color:inherit;font-size:1.125em}div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror,div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror,div:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror{border-color:#f27474 !important;box-shadow:0 0 2px #f27474 !important}div:where(.swal2-container) input:where(.swal2-input):hover,div:where(.swal2-container) input:where(.swal2-file):hover,div:where(.swal2-container) textarea:where(.swal2-textarea):hover{box-shadow:var(--swal2-input-hover-box-shadow)}div:where(.swal2-container) input:where(.swal2-input):focus,div:where(.swal2-container) input:where(.swal2-file):focus,div:where(.swal2-container) textarea:where(.swal2-textarea):focus{border:var(--swal2-input-focus-border);outline:none;box-shadow:var(--swal2-input-focus-box-shadow)}div:where(.swal2-container) input:where(.swal2-input)::placeholder,div:where(.swal2-container) input:where(.swal2-file)::placeholder,div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder{color:#ccc}div:where(.swal2-container) .swal2-range{margin:1em 2em 3px;background:var(--swal2-background)}div:where(.swal2-container) .swal2-range input{width:80%}div:where(.swal2-container) .swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}div:where(.swal2-container) .swal2-range input,div:where(.swal2-container) .swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}div:where(.swal2-container) .swal2-input{height:2.625em;padding:0 .75em}div:where(.swal2-container) .swal2-file{width:75%;margin-right:auto;margin-left:auto;background:var(--swal2-input-background);font-size:1.125em}div:where(.swal2-container) .swal2-textarea{height:6.75em;padding:.75em}div:where(.swal2-container) .swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:var(--swal2-input-background);color:inherit;font-size:1.125em}div:where(.swal2-container) .swal2-radio,div:where(.swal2-container) .swal2-checkbox{align-items:center;justify-content:center;background:var(--swal2-background);color:inherit}div:where(.swal2-container) .swal2-radio label,div:where(.swal2-container) .swal2-checkbox label{margin:0 .6em;font-size:1.125em}div:where(.swal2-container) .swal2-radio input,div:where(.swal2-container) .swal2-checkbox input{flex-shrink:0;margin:0 .4em}div:where(.swal2-container) label:where(.swal2-input-label){display:flex;justify-content:center;margin:1em auto 0}div:where(.swal2-container) div:where(.swal2-validation-message){align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:var(--swal2-validation-message-background);color:var(--swal2-validation-message-color);font-size:1em;font-weight:300}div:where(.swal2-container) div:where(.swal2-validation-message)::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}div:where(.swal2-container) .swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:rgba(0,0,0,0);font-weight:600}div:where(.swal2-container) .swal2-progress-steps li{display:inline-block;position:relative}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:var(--swal2-progress-step-background);color:#fff}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:var(--swal2-progress-step-background)}div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}div:where(.swal2-icon){position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;zoom:var(--swal2-icon-zoom);border:.25em solid rgba(0,0,0,0);border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;user-select:none}div:where(.swal2-icon) .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}div:where(.swal2-icon).swal2-error{border-color:#f27474;color:#f27474}div:where(.swal2-icon).swal2-error .swal2-x-mark{position:relative;flex-grow:1}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-error.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark{animation:swal2-animate-error-x-mark .5s}}div:where(.swal2-icon).swal2-warning{border-color:#f8bb86;color:#f8bb86}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-warning.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .5s}}div:where(.swal2-icon).swal2-info{border-color:#3fc3ee;color:#3fc3ee}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-info.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .8s}}div:where(.swal2-icon).swal2-question{border-color:#87adbd;color:#87adbd}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-question.swal2-icon-show{animation:swal2-animate-error-icon .5s}div:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content{animation:swal2-animate-question-mark .8s}}div:where(.swal2-icon).swal2-success{border-color:#a5dc86;color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;border-radius:50%}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}div:where(.swal2-icon).swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-0.25em;left:-0.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}div:where(.swal2-icon).swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}@container swal2-popup style(--swal2-icon-animations:true){div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-animate-success-line-tip .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-animate-success-line-long .75s}div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right{animation:swal2-rotate-success-circular-line 4.25s ease-in}}[class^=swal2]{-webkit-tap-highlight-color:rgba(0,0,0,0)}.swal2-show{animation:var(--swal2-show-animation)}.swal2-hide{animation:var(--swal2-hide-animation)}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}.swal2-toast{box-sizing:border-box;grid-column:1/4 !important;grid-row:1/4 !important;grid-template-columns:min-content auto min-content;padding:1em;overflow-y:hidden;border:var(--swal2-toast-border);background:var(--swal2-background);box-shadow:var(--swal2-toast-box-shadow);pointer-events:all}.swal2-toast>*{grid-column:2}.swal2-toast h2:where(.swal2-title){margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-toast .swal2-loading{justify-content:center}.swal2-toast input:where(.swal2-input){height:2em;margin:.5em;font-size:1em}.swal2-toast .swal2-validation-message{font-size:1em}.swal2-toast div:where(.swal2-footer){margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-toast button:where(.swal2-close){grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-toast div:where(.swal2-html-container){margin:.5em 1em;padding:0;overflow:initial;font-size:1em;text-align:initial}.swal2-toast div:where(.swal2-html-container):empty{padding:0}.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-toast div:where(.swal2-actions){justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-toast button:where(.swal2-styled){margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;border-radius:50%}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.8em;left:-0.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}@container swal2-popup style(--swal2-icon-animations:true){.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-toast-animate-success-line-tip .75s}.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-toast-animate-success-line-long .75s}}.swal2-toast.swal2-show{animation:var(--swal2-toast-show-animation)}.swal2-toast.swal2-hide{animation:var(--swal2-toast-hide-animation)}@keyframes swal2-show{0%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}100%{transform:translate3d(0, 0, 0) scale(1);opacity:1}}@keyframes swal2-hide{0%{transform:translate3d(0, 0, 0) scale(1);opacity:1}100%{transform:translate3d(0, -50px, 0) scale(0.9);opacity:0}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-0.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(0.4);opacity:0}50%{margin-top:1.625em;transform:scale(0.4);opacity:0}80%{margin-top:-0.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}@keyframes swal2-rotate-loading{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-toast-show{0%{transform:translateY(-0.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(0.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0deg)}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-0.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}</style>
 <style>
@@ -34,62 +130,56 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
   .box.facebook2 .linked{ color:#111 !important; opacity: 1 !important; }
 
   .box.bidv{ background: #00524E !important; }
-  .box.cake{ background: #EC4899 !important; }
+  .box.cake{ background: #FE00A7 !important; }
 
   /* Hover ring baseline (will be animated by JS) */
   .box{
     will-change: transform, box-shadow, filter;
     transition: transform 80ms linear, box-shadow 80ms linear;
   }
-  /* ===== Color overrides theo yêu cầu ===== */
-
-/* Steam */
-.box.steam{
-  background: #171a21 !important;
-}
-
-/* Riot */
-.box.Riot{
-  background: #E55F2F !important;
-}
-
-/* Discord */
-.box.discord{
-  background: #7289da !important;
-}
-
-/* Email - Rainbow */
-.box.gmail{
-  background: linear-gradient(
-    90deg,
-    #ff004c,
-    #ff7a00,
-    #ffe600,
-    #00d084,
-    #00a3ff,
-    #7a5cff,
-    #ff00d4
-  ) !important;
-  background-size: 400% 100% !important;
-  animation: gmailRainbow 6s linear infinite !important;
-}
-
-/* Text/icon luôn rõ trên nền màu */
-.box.steam .detail, .box.steam .linked,
-.box.Riot  .detail, .box.Riot  .linked,
-.box.discord .detail, .box.discord .linked,
-.box.gmail .detail, .box.gmail .linked{
-  color: #fff !important;
-}
-
-/* Rainbow animation */
-@keyframes gmailRainbow{
-  0%   { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
 </style>
 
+
+<style id="minecraft-font">
+@font-face{
+  font-family: "Minecraft";
+  src: url("./Minecraft.ttf") format("truetype");
+  font-display: swap;
+}
+#name, #contact-text{
+  font-family: "Minecraft", "Lobster", "Roboto", cursive !important;
+  letter-spacing: 0.2px;
+}
+</style>
+<style id="button-colors">
+/* Requested button colors */
+.box.gmail{
+  background: linear-gradient(90deg,
+    #ff0033 0%,
+    #ff7a00 18%,
+    #ffe600 36%,
+    #2ecc71 54%,
+    #00c2ff 72%,
+    #6a5cff 86%,
+    #d400ff 100%) !important;
+}
+.box.steam{
+  background: #06183B !important;
+}
+.box.Riot, .box.riot{
+  background: #E55F2F !important;
+}
+.box.discord{
+  background: #5865F2 !important;
+}
+/* Keep text readable on colored buttons */
+.box.gmail .detail, .box.gmail .linked,
+.box.steam .detail, .box.steam .linked,
+.box.Riot .detail, .box.Riot .linked, .box.riot .detail, .box.riot .linked,
+.box.discord .detail, .box.discord .linked{
+  color: #fff !important;
+}
+</style>
 </head>
 	<!-- Bắt đầu phần hiển thị -->
 	<body __processed_c7f0cbed-b1bc-4589-9df0-8796847302a5__="true" bis_status="ok" bis_frame_id="878" bis_body_id="fr_m31fgbswanuqxmxj8cqjd0" bis_depth="0" bis_chainid="1" bis_size="{&quot;x&quot;:0,&quot;y&quot;:0,&quot;w&quot;:1903,&quot;h&quot;:0,&quot;abs_x&quot;:0,&quot;abs_y&quot;:0}">
@@ -126,7 +216,7 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 <div id="content" bis_size="{&quot;x&quot;:726,&quot;y&quot;:285,&quot;w&quot;:450,&quot;h&quot;:673,&quot;abs_x&quot;:726,&quot;abs_y&quot;:285}">
 <!-- info -->
 <p id="name" bis_size="{&quot;x&quot;:726,&quot;y&quot;:285,&quot;w&quot;:450,&quot;h&quot;:45,&quot;abs_x&quot;:726,&quot;abs_y&quot;:285}">
-						Vũ Quang Anh<br>
+						Vu Quang Anh<br>
 						(Ricardo Beos) 
 </p>
 <div class="center" bis_size="{&quot;x&quot;:726,&quot;y&quot;:330,&quot;w&quot;:450,&quot;h&quot;:11,&quot;abs_x&quot;:726,&quot;abs_y&quot;:330}">
@@ -137,7 +227,7 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 <p id="bio" bis_size="{&quot;x&quot;:726,&quot;y&quot;:351,&quot;w&quot;:450,&quot;h&quot;:24,&quot;abs_x&quot;:726,&quot;abs_y&quot;:351}">Mod là chân ái, custom là đam mê :D</p>
 <div class="center" bis_size="{&quot;x&quot;:726,&quot;y&quot;:385,&quot;w&quot;:450,&quot;h&quot;:56,&quot;abs_x&quot;:726,&quot;abs_y&quot;:385}">
 <div class="border" bis_size="{&quot;x&quot;:839,&quot;y&quot;:385,&quot;w&quot;:225,&quot;h&quot;:2,&quot;abs_x&quot;:839,&quot;abs_y&quot;:385}"></div>
-<p id="contact-text" bis_size="{&quot;x&quot;:872,&quot;y&quot;:397,&quot;w&quot;:157,&quot;h&quot;:34,&quot;abs_x&quot;:872,&quot;abs_y&quot;:397}"> KẾT BẠN VỚI TÔI</p>
+<p id="contact-text"> CONTACT WITH ME 😘</p>
 </div>
 <!-- contact -->
 <div class="center boxs" id="boxs" bis_size="{&quot;x&quot;:726,&quot;y&quot;:444,&quot;w&quot;:450,&quot;h&quot;:480,&quot;abs_x&quot;:726,&quot;abs_y&quot;:444}">
@@ -308,7 +398,7 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 			//]]>
 		</script>
 <div class="no-items section" id="code.pro.vn" bis_size="{&quot;x&quot;:0,&quot;y&quot;:0,&quot;w&quot;:1903,&quot;h&quot;:0,&quot;abs_x&quot;:0,&quot;abs_y&quot;:0}"></div>
-<head>
+	<!--<head>
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
 
@@ -333,62 +423,40 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
 </style>
 
 </head>-->
-	<body>
+	<!--<body>
 </body>-->
 	
 	
 
-<!-- ===== Music Player + Playlist + Audio-Reactive Photo Border ===== -->
+<!-- ===== Music Player (REBUILT) ===== -->
 <style>
   .music-dock{
     position: fixed;
     right: 16px;
     bottom: 16px;
-    top: auto;
     width: 360px;
-    max-height: calc(100vh - 32px);
-    overflow: hidden;
+    max-width: calc(100vw - 32px);
     z-index: 1000000;
     border-radius: 16px;
-    background: rgba(20,20,20,0.78);
+    background: rgba(20,20,20,0.80);
     color: #fff;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.28);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    overflow: hidden;
     transform-origin: bottom right;
-    transition: transform 260ms cubic-bezier(.2,.9,.2,1), opacity 260ms cubic-bezier(.2,.9,.2,1);
+    transition: transform 200ms ease, opacity 200ms ease;
   }
-
-  /* Minimized: "sucked" into corner */
-  .music-dock.is-min{
-    width: 220px;
-    border-radius: 16px;
-    opacity: 1.0;
-    transform: scale(0.72);
-  }
-  .music-dock.is-min .body{ display:none !important; }
-  .music-dock.is-min .sub{ display:none; }
-
-  /* Ultra-min: tiny pill */
-  .music-dock.is-pill{
-    width: 170px;
-    border-radius: 999px;
-    opacity: 0.95;
-    transform: scale(0.65);
-  }
-  .music-dock.is-pill .body{ display:none !important; }
-  .music-dock.is-pill .sub{ display:none; }
-
-  /* Ensure dock doesn't push layout */
-  body{ padding-right: 0 !important; }
+  .music-dock.is-min{ transform: scale(0.90); }
+  .music-dock *{ box-sizing: border-box; }
 
   .music-dock .hd{
-    padding: 12px 12px 8px 12px;
+    padding: 10px 12px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap: 8px;
+    gap: 10px;
     border-bottom: 1px solid rgba(255,255,255,0.12);
   }
   .music-dock .title{
@@ -398,12 +466,16 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
   }
   .music-dock .sub{
     font-size: 12px;
-    opacity: .8;
+    opacity: .82;
     margin-top: 2px;
+    max-width: 240px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
   .music-dock .btn{
     appearance:none;
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.18);
     background: rgba(255,255,255,0.08);
     color:#fff;
     border-radius: 10px;
@@ -412,12 +484,14 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
     font-size: 12px;
     white-space: nowrap;
   }
+  .music-dock .btn:active{ transform: translateY(1px); }
+
   .music-dock .body{ padding: 10px 12px 12px 12px; }
   .music-dock audio{ width: 100%; }
   .music-dock .plist{
     margin-top: 10px;
     overflow:auto;
-    max-height: 46vh;
+    max-height: 40vh;
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.12);
   }
@@ -440,17 +514,17 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
     overflow:hidden;
     white-space:nowrap;
     text-overflow:ellipsis;
-    max-width: 230px;
+    max-width: 240px;
   }
   .music-dock .meta{ font-size: 12px; opacity: .75; }
   .music-dock .hint{
     font-size: 12px;
-    opacity: .85;
+    opacity: .86;
     margin-top: 8px;
     line-height: 1.35;
   }
 
-  /* Audio-reactive photo border */
+  /* Avatar audio-reactive baseline */
   #profilePhoto{
     border-radius: 50%;
     display: block;
@@ -461,8 +535,9 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
       0 0 18px rgba(0, 150, 255, 0.25);
   }
 
-  /* Chừa khoảng trống bên phải để không bị dock che */
-  body{ padding-right: 0; }
+  @media (max-width: 991px){
+    .music-dock{ width: 92vw; right: 4vw; bottom: 10px; }
+    .music-dock.is-min{ transform: scale(0.92); }
   }
 </style>
 
@@ -474,47 +549,36 @@ html,body{cursor:url("https://i.ibb.co/HTMMDv3C/Normal-Select-ezgif-com-ani-to-g
     </div>
     <div style="display:flex; gap:8px; align-items:center;">
       <button class="btn" id="startMusicBtn" type="button" style="display:none;">Bật nhạc</button>
-      <button class="btn" id="toggleDock" type="button">Nhỏ</button>
+      <button class="btn" id="toggleDock" type="button">Mở</button>
     </div>
   </div>
 
-  <div class="body" id="dockBody">
-    <audio id="audioPlayer" controls preload="auto"></audio>
+  <div class="body" id="dockBody" style="display:none;">
+    <audio id="audioPlayer" controls preload="auto" playsinline></audio>
     <div class="plist" id="playlist"></div>
-    <div class="hint" id="autoHint">
-      Nếu nhạc không tự phát, hãy bấm “Bật nhạc” hoặc nhấn Play.
-    </div>
-    <button class="btn" id="unmuteBtn" type="button" style="margin-top:10px; width:100%;">Bật tiếng</button>
-
+    <div class="hint" id="autoHint">Nếu nhạc không tự phát, hãy bấm “Bật nhạc” hoặc nhấn Play.</div>
   </div>
 </div>
 
 <script>
 (function(){
-  // ===== 1) Playlist: đổi đường dẫn/ tên file theo repo của bạn =====
-  // Bạn cần upload file vào repo, ví dụ:
-  // /music/01.mp3, /music/02.mp3, ...
+  // ===== Playlist (đổi đường dẫn/ tên file theo repo của bạn) =====
+  // Ví dụ: ./music/01.mp3, ./music/02.mp3, ...
   const tracks = [
     { name: "Track 01", src: "./music/01.mp3" },
     { name: "Track 02", src: "./music/02.mp3" },
     { name: "Track 03", src: "./music/03.mp3" }
   ];
 
-  const audio = document.getElementById("audioPlayer");
-  
-audio.muted = false;
-audio.volume = 1.0;
-const list = document.getElementById("playlist");
-  const now = document.getElementById("nowPlaying");
-  const hint = document.getElementById("autoHint");
-  
-  const unmuteBtn = document.getElementById("unmuteBtn");
-const btnToggle = document.getElementById("toggleDock");
-  const dockBody = document.getElementById("dockBody");
   const dock = document.getElementById("musicDock");
-  const btnStart = document.getElementById("startMusicBtn");
-
-  const img = document.getElementById("profilePhoto");
+  const btnToggle = document.getElementById("toggleDock");
+  const btnStart  = document.getElementById("startMusicBtn");
+  const dockBody  = document.getElementById("dockBody");
+  const audio     = document.getElementById("audioPlayer");
+  const list      = document.getElementById("playlist");
+  const now       = document.getElementById("nowPlaying");
+  const hint      = document.getElementById("autoHint");
+  const img       = document.getElementById("profilePhoto");
 
   let current = 0;
 
@@ -524,33 +588,32 @@ const btnToggle = document.getElementById("toggleDock");
     }[c]));
   }
 
+  function setNow(){
+    now.textContent = tracks[current]?.name || "—";
+  }
+
   function render(){
+    if (!list) return;
     list.innerHTML = "";
     tracks.forEach((t, i) => {
       const row = document.createElement("div");
       row.className = "track" + (i===current ? " active" : "");
-      row.innerHTML = `<div class="name" title="${escapeHtml(t.name)}">${escapeHtml(t.name)}</div>
-                       <div class="meta">${String(i+1).padStart(2,"0")}</div>`;
+      row.innerHTML =
+        `<div class="name" title="${escapeHtml(t.name)}">${escapeHtml(t.name)}</div>
+         <div class="meta">${String(i+1).padStart(2,"0")}</div>`;
       row.addEventListener("click", () => playIndex(i, true));
       list.appendChild(row);
     });
-  }
-
-  function setNowPlaying(){
-    now.textContent = tracks[current]?.name || "—";
   }
 
   function safePlay(userInitiated){
     const p = audio.play();
     if (p && typeof p.catch === "function"){
       p.then(() => {
-        hint.style.display = "none";
+        if (hint) hint.style.display = "none";
         btnStart.style.display = "none";
       }).catch(() => {
-        // Autoplay blocked
-        if (!userInitiated){
-          btnStart.style.display = "";
-        }
+        if (!userInitiated) btnStart.style.display = "";
       });
     }
   }
@@ -558,10 +621,9 @@ const btnToggle = document.getElementById("toggleDock");
   function playIndex(i, userInitiated){
     current = i;
     audio.src = tracks[current].src;
-    
-audio.muted = false;
-audio.volume = 1.0;
-setNowPlaying();
+    audio.muted = false;
+    audio.volume = 1.0;
+    setNow();
     render();
     safePlay(!!userInitiated);
   }
@@ -571,44 +633,47 @@ setNowPlaying();
     playIndex(current, false);
   }
 
-  audio.addEventListener("ended", next);
-
-  // ===== 2) Autoplay attempt (có thể bị chặn) =====
-  function tryAutoplay(){
-    if (!tracks.length) return;
-    playIndex(0, false);
+  if (audio){
+    audio.addEventListener("ended", next);
   }
 
-  // Nếu bị chặn: phát sau tương tác đầu tiên
-  function armFirstInteraction(){
-    const onFirst = () => {
-      if (!audio.src && tracks.length) audio.src = tracks[0].src;
-      safePlay(true);
-    };
-    window.addEventListener("pointerdown", onFirst, { once: true });
-    window.addEventListener("keydown", onFirst, { once: true });
+  // ===== Dock toggle (mở/thu nhỏ) =====
+  function setExpanded(expanded){
+    if (expanded){
+      dock.classList.remove("is-min");
+      dockBody.style.display = "";
+      btnToggle.textContent = "Nhỏ";
+      dock.setAttribute("data-expanded","1");
+    } else {
+      dock.classList.add("is-min");
+      dockBody.style.display = "none";
+      btnToggle.textContent = "Mở";
+      dock.setAttribute("data-expanded","0");
+    }
   }
+  setExpanded(false);
+
+  btnToggle.addEventListener("click", () => {
+    const expanded = dock.getAttribute("data-expanded") === "1";
+    setExpanded(!expanded);
+  });
 
   btnStart.addEventListener("click", () => {
     if (!audio.src && tracks.length) audio.src = tracks[0].src;
     safePlay(true);
   });
 
-  // ===== 3) Ẩn/hiện dock =====
-  btnToggle.addEventListener("click", () => {
-    const isHidden = dock.getAttribute("data-hidden") === "1";
-    if (isHidden){
-      dock.setAttribute("data-hidden","0");
-      dockBody.style.display = "";
-      btnToggle.textContent = "Ẩn";
-    } else {
-      dock.setAttribute("data-hidden","1");
-      dockBody.style.display = "none";
-      btnToggle.textContent = "Hiện";
-    }
-  });
+  // ===== Autoplay attempt (có thể bị chặn) =====
+  function tryAutoplay(){
+    if (!tracks.length) return;
+    if (!audio.src) audio.src = tracks[0].src;
+    setNow();
+    render();
+    safePlay(false);
+  }
+  tryAutoplay();
 
-  // ===== 4) Audio-reactive border cho ảnh (Web Audio API) =====
+  // ===== Web Audio API: audio-reactive border =====
   let ctx, analyser, srcNode, data, rafId;
 
   function setupAudioContext(){
@@ -623,38 +688,34 @@ setNowPlaying();
     analyser.fftSize = 1024;
     analyser.smoothingTimeConstant = 0.85;
 
-    // MediaElementSource chỉ được tạo 1 lần cho mỗi audio element
+    // MediaElementSource chỉ được tạo 1 lần cho audio element
     srcNode = ctx.createMediaElementSource(audio);
     srcNode.connect(analyser);
     analyser.connect(ctx.destination);
 
     data = new Uint8Array(analyser.frequencyBinCount);
-    
     return true;
-return true;
   }
 
   function animate(){
     if (!analyser || !img) return;
-
     analyser.getByteFrequencyData(data);
 
     let sum = 0;
     for (let i = 0; i < data.length; i++) sum += data[i];
-    const avg = sum / data.length;      // 0..255
-
-    const level = Math.min(1, avg / 140); // chỉnh 140->100 nếu muốn rung mạnh hơn
+    const avg = sum / data.length;       // 0..255
+    const level = Math.min(1, avg / 140); // 140 -> nhỏ hơn để rung mạnh hơn
 
     const scale = 1 + level * 0.06;
-    const ring = 4 + level * 10;
-    const glow = 18 + level * 40;
-    const alpha1 = 0.25 + level * 0.35;
-    const alpha2 = 0.15 + level * 0.35;
+    const ring  = 4 + level * 10;
+    const glow  = 18 + level * 40;
+    const a1    = 0.25 + level * 0.35;
+    const a2    = 0.15 + level * 0.35;
 
     img.style.transform = `scale(${scale})`;
     img.style.boxShadow =
-      `0 0 0 ${ring}px rgba(0,150,255,${alpha1}), ` +
-      `0 0 ${glow}px rgba(0,150,255,${alpha2})`;
+      `0 0 0 ${ring}px rgba(0,150,255,${a1}), ` +
+      `0 0 ${glow}px rgba(0,150,255,${a2})`;
 
     rafId = requestAnimationFrame(animate);
   }
@@ -686,28 +747,16 @@ return true;
     if (ctx && ctx.state === "suspended") ctx.resume();
   }, { once: true });
 
-  // ===== init =====
-  render();
-  setNowPlaying();
-  tryAutoplay();
-  armFirstInteraction();
-
-  // Hard unlock for browsers that start muted/blocked:
-  function unlockAudio(){
+  // Unlock: nếu autoplay bị chặn, nhấn lần đầu sẽ bật nhạc
+  function unlock(){
     try{
-      audio.muted = false;
-      audio.volume = 1.0;
-      const p = audio.play();
-      if (p && typeof p.catch === "function") {
-        p.then(() => setTimeout(collapseDock, 800)).catch(()=>{});
-      }
-
+      if (!audio.src && tracks.length) audio.src = tracks[0].src;
+      safePlay(true);
     }catch(e){}
-    window.removeEventListener("pointerdown", unlockAudio);
-    window.removeEventListener("keydown", unlockAudio);
   }
-  window.addEventListener("pointerdown", unlockAudio, { once: true });
-  window.addEventListener("keydown", unlockAudio, { once: true });
+  window.addEventListener("pointerdown", unlock, { once: true });
+  window.addEventListener("keydown", unlock, { once: true });
+
 })();
 </script>
 <!-- ===== End Music Player ===== -->
